@@ -1,0 +1,2 @@
+import datetime
+time_stamp = datetime.datetime.now().strftime("%m%d%H%M%S%f")
