@@ -1,0 +1,4 @@
+kubectl create serviceaccount dashboard-serviceaccount -n kube-system
+kubectl create clusterrolebinding dashboard-cluster-admin --clusterrole=cluster-admin --serviceaccount=kube-system:dashboard-serviceaccount
+kubectl get secret -n kube-system |grep dashboard-serviceaccount-token
+kubectl describe secret dashboard-serviceaccount-token-f45wg -n kube-system
